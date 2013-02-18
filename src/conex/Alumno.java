@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Mike
+ * @fecha 18/02/2013
  */
 public class Alumno extends javax.swing.JFrame {
 
@@ -224,7 +225,7 @@ public class Alumno extends javax.swing.JFrame {
         dir=this.txtdireccion.getText();
         dni=this.txtdni.getText();
         try {
-            String sql="update alumno set Nombre='"+nom+
+            String sql="UPDATE alumno set Nombre='"+nom+
                     "', Apellidos='"+ape+"', Direccion='"+dir+"', "
                     + "Dni='"+dni+"' where IdAlumno='"+id+"'";
             st = con.createStatement();
