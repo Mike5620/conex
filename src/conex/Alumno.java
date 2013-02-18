@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author HOLA
+ * @author Mike
  */
 public class Alumno extends javax.swing.JFrame {
 
@@ -106,7 +106,9 @@ public class Alumno extends javax.swing.JFrame {
              for (int j = 0; j <this.tblalumno.getColumnCount(); j++) {
                 this.tblalumno.changeSelection(i-1, j, false,true);
              }
-        }catch(Exception e){}
+        }catch(Exception e){
+            System.err.println(e);
+        }
     }
     
     public void EditableText(boolean b){
@@ -118,7 +120,9 @@ public class Alumno extends javax.swing.JFrame {
     
     public void primero(){
         try {
-            if(rt1.first()) cargartext();
+            if(rt1.first()) {
+                cargartext();
+            }
         } catch (SQLException px) {
         }
     }
@@ -126,7 +130,9 @@ public class Alumno extends javax.swing.JFrame {
     public void siguiente(){
         try {
             if (rt1.isLast()==false) {
-                if(rt1.next()) cargartext();
+                if(rt1.next()) {
+                    cargartext();
+                }
             }
         } catch (SQLException px) {
             System.out.println(""+ px);
@@ -136,7 +142,9 @@ public class Alumno extends javax.swing.JFrame {
     public void anterior(){
         try {
             if (rt1.isFirst()==false) {
-                if(rt1.previous()) cargartext();
+                if(rt1.previous()) {
+                    cargartext();
+                }
             }
         } catch (SQLException px) {
         }
@@ -144,7 +152,9 @@ public class Alumno extends javax.swing.JFrame {
 
     public void ultimo(){
         try {
-            if(rt1.last()) cargartext();
+            if(rt1.last()) {
+                cargartext();
+            }
         } catch (SQLException px) {
         }
     }
